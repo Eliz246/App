@@ -1,0 +1,36 @@
+.card{
+    border-radius: 30px;
+    width: 400px;
+}
+.img_wrapper{
+    width: 100%;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    position: relative;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.favoriteBtn{
+    background: none;
+    border:none;
+    position: absolute;
+    top: 25px;
+    right: 17px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.content{
+    padding-left: 40px;
+    color:black;
+}
+.info{
+    display: flex;
+}
+.item{
+    margin: 5px 10px 5px 0px;
+    color:#858585;
+}

@@ -1,11 +1,15 @@
-import './index.css'
+import './index.css';
 import Header from './components/ui/Header/Header';
 import Card from './components/ui/Card/Card';
+import houseImg from './images/house-isolated-field.jpg';
+
 function App() {
   return (
   <>
     <Header></Header>
-    <Card id='0' image='./images/house-isolated-field.jpg' title="название проекта" area={100} floors={1} rooms={5}/>
+    <div className="container">
+      <Card id='0' image={houseImg} title="Название проекта" area={100} floors={1} rooms={5}/>
+    </div>
   </>
     
   )

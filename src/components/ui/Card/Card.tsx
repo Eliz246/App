@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import cn from 'classnames';
 import s from './Card.module.css';
 import heartS from '../../../images/heart_stroke_b.svg';
 import heartF from '../../../images/heart_fill_b.svg';
@@ -48,7 +49,7 @@ const Card =({id, image, title, area, floors, rooms}:CardProps)=>{
                 </button>
             </div>
             <div className={s.content}>
-                <h4 className={s.title}>{title}</h4>
+                <h4 className={cn(s.h4, 'h4')}>{title}</h4>
                 <div className={s.info}>
                     <p className={s.item}>{area}m2</p>
                     <p className={s.item}>{floors}{declOfNum(floors,[' этаж',' этажа',' этажей'])}</p>
