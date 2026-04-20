@@ -11,9 +11,10 @@ interface CardProps{
     area:number;
     floors:number;
     rooms: number;
+    onFavoriteChange?: (id: string | number, isFav: boolean) => void;
 };
 
-const Card =({id, image, title, area, floors, rooms}:CardProps)=>{
+const Card =({id, onFavoriteChange, image, title, area, floors, rooms}:CardProps)=>{
     const [isFavorite, setIsFavorite] = useState(() => {
         const saved = localStorage.getItem('favorites');
         const favorites = saved ? JSON.parse(saved) : [];
@@ -35,6 +36,15 @@ const Card =({id, image, title, area, floors, rooms}:CardProps)=>{
         // 3. Сохраняем обновленный список обратно
         localStorage.setItem('favorites', JSON.stringify(favorites));
         setIsFavorite(!isFavorite);
+
+        const newFavoriteStatus = !isFavorite;
+        setIsFavorite(newFavoriteStatus);
+
+        // ВЫЗЫВАЕМ ФУНКЦИЮ ОБРАТНОЙ СВЯЗИ
+        if (onFavoriteChange) {
+            onFavoriteChange(id, newFavoriteStatus);
+        }
+        
     };
     const declOfNum = (number: number, titles: [string, string, string]) => {
         const cases = [2, 0, 1, 1, 1, 2];

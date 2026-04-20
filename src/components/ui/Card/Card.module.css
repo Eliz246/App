@@ -8,6 +8,7 @@
     overflow: hidden;
     margin-bottom: 12px;
     position: relative;
+    aspect-ratio: 4 / 2.8;
 }
 .img{
     width: 100%;
