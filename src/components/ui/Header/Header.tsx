@@ -1,23 +1,25 @@
 import React from "react";
 import cn from 'classnames';
 import s from './Header.module.css';
-import sunicon from '../../../images/sun-svgrepo-com.svg';
-import heart from '../../../images/heart-svgrepo-com.svg';
+import sunicon from '../../../images/sun.svg';
+import heart from '../../../images/heart.svg';
 const Header: React.FC =()=>{
     return(
         <div className={s.header}>
             <div className={cn(s.container, 'container')}>
-                <div>Interi</div>
-                <ul>
-                    <li>Проекты</li>
-                    <li>Блог</li>
-                    <li>О нас</li>
-                    <li>Контакты</li>
-                </ul>
-                <div>
-                    <p>+375 (29) 999-99-99</p>
-                    <img src={sunicon} className=""></img>
-                    <img src={heart} className=""></img>
+                <div className={s.wrapper}>
+                    <div className={cn(s.logo, 'logo')}>Interi</div>
+                    <ul className={s.menu}>
+                        <li className={s.item}>Проекты</li>
+                        <li className={s.item}>Блог</li>
+                        <li className={s.item}>О нас</li>
+                        <li className={s.item}>Контакты</li>
+                    </ul>
+                    <div className={s.wrapper}>
+                        <p className={s.item}>+375 (29) 999-99-99</p>
+                        <img src={sunicon} className={cn(s.icon, s.item)}></img>
+                        <img src={heart} className={cn(s.icon, s.item)}></img>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,4 +1,23 @@
 .header{
+    padding: 10px 0px;
     background-color: #121212;
     color: #ffffff;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.icon{
+    height: 30px;
+    width: 30px;
+    color:#ffffff;
+}
+.menu{
+    list-style-type: none;
+    display: flex;
+}
+.item{
+    margin-right: 27px;
+    font-size: 28px;
 }
