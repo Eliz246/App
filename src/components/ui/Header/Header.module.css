@@ -21,3 +21,9 @@
     margin-right: 27px;
     font-size: 28px;
 }
+.link{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}

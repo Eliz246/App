@@ -1,5 +1,6 @@
 import React from "react";
 import cn from 'classnames';
+import { Link } from 'react-router-dom';
 import s from './Header.module.css';
 import sunicon from '../../../images/sun.svg';
 import heart from '../../../images/heart.svg';
@@ -8,7 +9,7 @@ const Header: React.FC =()=>{
         <div className={s.header}>
             <div className={cn(s.container, 'container')}>
                 <div className={s.wrapper}>
-                    <div className={cn(s.logo, 'logo')}>Interi</div>
+                    <Link to='/' className={cn(s.logo, 'logo',s.link)}>Interi</Link>
                     <ul className={s.menu}>
                         <li className={s.item}>Проекты</li>
                         <li className={s.item}>Блог</li>
@@ -18,7 +19,7 @@ const Header: React.FC =()=>{
                     <div className={s.wrapper}>
                         <p className={s.item}>+375 (29) 999-99-99</p>
                         <img src={sunicon} className={cn(s.icon, s.item)}></img>
-                        <img src={heart} className={cn(s.icon, s.item)}></img>
+                        <Link to="/favorites" className={s.link}><img src={heart} className={cn(s.icon, s.item)}></img></Link>
                     </div>
                 </div>
             </div>

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import Header from './components/ui/Header/Header';
 import Card from './components/ui/Card/Card';
@@ -6,9 +7,7 @@ import { Favorites } from './components/ui/Favorites/Favorites';
 
 function App() {
   const lastProjects = projects.slice(0,8);
-  return (
-  <>
-    <Header></Header>
+  const MainPage = ()=>(
     <div className="section">
       <div className="container">
         <h2 className='h2'>Наши проекты</h2>
@@ -19,17 +18,23 @@ function App() {
         </div>
       </div>
     </div>
-    <div className="section">
-      <div className="container">
-        <h2 className='h2'>Избранное</h2>
-        <div className="card_wrapper">
-          <Favorites/>
+  );
+  return (
+  <Router>
+    <Header></Header>
+    <Routes>
+      <Route path='/' element={<MainPage/>}/>
+      <Route path='/favorites' element={
+        <div className="section">
+          <div className="container">
+            <h2 className='h2'>Избранное</h2>
+              <Favorites/>
+          </div>
         </div>
-      </div>
-    </div>
-  </>
-    
-  )
+      }/>
+    </Routes>
+  </Router> 
+  );
 }
 
 export default App;
