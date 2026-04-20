@@ -1,12 +1,12 @@
 .card{
     border-radius: 30px;
-    width: 400px;
+    width: 364px;
 }
 .img_wrapper{
     width: 100%;
     border-radius: 50px;
     overflow: hidden;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     position: relative;
 }
 .img{
