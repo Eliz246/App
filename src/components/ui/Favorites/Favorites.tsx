@@ -4,7 +4,6 @@ import Card from '../Card/Card';
 import projects, {type IProject} from '../../../data/projects';
 
 export const Favorites: React.FC = () => {
-  // Указываем тип стейта <IProject[]>
     const [favoriteItems, setFavoriteItems] = useState<IProject[]>([]);
 
     const handleFavoriteChange = (id: string | number, isFav: boolean) => {
@@ -14,15 +13,15 @@ export const Favorites: React.FC = () => {
     };
 
     useEffect(() => {
-    const saved = localStorage.getItem('favorites');
-    // Явно типизируем массив ID как (string | number)[]
-    const savedIds: (string | number)[] = saved ? JSON.parse(saved) : [];
+      const saved = localStorage.getItem('favorites');
+      // Явно типизируем массив ID как (string | number)[]
+      const savedIds: (string | number)[] = saved ? JSON.parse(saved) : [];
 
-    const filtered = projects.filter((project: IProject) => 
-      savedIds.includes(project.id)
-    );
-    setFavoriteItems(filtered);
-  }, []);
+      const filtered = projects.filter((project: IProject) => 
+        savedIds.includes(project.id)
+      );
+      setFavoriteItems(filtered);
+    }, []);
 
   return (
     <>

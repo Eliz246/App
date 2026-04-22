@@ -4,20 +4,26 @@ import Header from './components/ui/Header/Header';
 import Card from './components/ui/Card/Card';
 import projects from './data/projects';
 import { Favorites } from './components/ui/Favorites/Favorites';
-
+import Calculator from './components/ui/Calculator/Calculator';
 function App() {
   const lastProjects = projects.slice(0,8);
   const MainPage = ()=>(
+  <>
     <div className="section">
-      <div className="container">
-        <h2 className='h2'>Наши проекты</h2>
-        <div className="card_wrapper">
-          {lastProjects.map((item) => (
-            <Card key={item.id} {...item} />
-          ))}
+        <div className="container">
+          <h2 className='h2'>Наши проекты</h2>
+          <div className="card_wrapper">
+            {lastProjects.map((item) => (
+              <Card key={item.id} {...item} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <div className="section">
+            <Calculator/>
+      </div>
+  </>
+    
   );
   return (
   <Router>
