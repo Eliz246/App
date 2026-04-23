@@ -11,6 +11,8 @@ body {
 .logo{
   font-size: 64px;
   color:#fff;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
 }
 .h2{
   font-size: 64px;

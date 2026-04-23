@@ -6,6 +6,7 @@ import projects from './data/projects';
 import { Favorites } from './components/ui/Favorites/Favorites';
 import Calculator from './components/ui/Calculator/Calculator';
 import Form from './components/ui/Form/Form';
+import Footer from './components/ui/Footer/Footer';
 function App() {
   const lastProjects = projects.slice(0,8);
   const MainPage = ()=>(
@@ -42,6 +43,7 @@ function App() {
         </div>
       }/>
     </Routes>
+    <Footer/>
   </Router> 
   );
 }
