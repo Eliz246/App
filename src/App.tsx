@@ -5,6 +5,7 @@ import Card from './components/ui/Card/Card';
 import projects from './data/projects';
 import { Favorites } from './components/ui/Favorites/Favorites';
 import Calculator from './components/ui/Calculator/Calculator';
+import Form from './components/ui/Form/Form';
 function App() {
   const lastProjects = projects.slice(0,8);
   const MainPage = ()=>(
@@ -20,10 +21,12 @@ function App() {
         </div>
       </div>
       <div className="section">
-            <Calculator/>
+        <Calculator/>
+      </div>
+      <div className="section">
+            <Form/>
       </div>
   </>
-    
   );
   return (
   <Router>
