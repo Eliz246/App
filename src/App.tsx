@@ -8,6 +8,7 @@ import Calculator from './components/ui/Calculator/Calculator';
 import Form from './components/ui/Form/Form';
 import Footer from './components/ui/Footer/Footer';
 import Catalog from './components/ui/Catalog/Catalog';
+import Contacts from './components/ui/Contacts/Contacts';
 
 function App() {
   const lastProjects = projects.slice(0,8);
@@ -45,6 +46,7 @@ function App() {
         </div>
       }/>
       <Route path="/catalog" element={<Catalog />} />
+      <Route path="/contacts" element={<><Contacts /><Form/></>} />
     </Routes>
     <Footer/>
   </Router> 
