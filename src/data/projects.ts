@@ -11,6 +11,7 @@ export interface IProject {
   area: number;
   floors: number;
   rooms: number;
+  features: string[];
 }
 
 const projects: IProject[] = [
@@ -20,7 +21,8 @@ const projects: IProject[] = [
     title: "Скандинавский уют",
     area: 120,
     floors: 1,
-    rooms: 4
+    rooms: 4,
+    features:['гараж', 'сауна']
   },
   {
     id: '2',
@@ -28,7 +30,8 @@ const projects: IProject[] = [
     title: "Современный хай-тек",
     area: 250,
     floors: 2,
-    rooms: 6
+    rooms: 6,
+    features:['гараж', 'бассейн']
   },
   {
     id: '3',
@@ -36,7 +39,8 @@ const projects: IProject[] = [
     title: "Уютное шале",
     area: 90,
     floors: 1,
-    rooms: 3
+    rooms: 3,
+    features:['']
   },
   {
     id: '4',
@@ -44,7 +48,8 @@ const projects: IProject[] = [
     title: "Дом-теплица",
     area: 156,
     floors: 2,
-    rooms: 11
+    rooms: 11,
+    features:['гараж','кладовая', 'гардеробная']
   },
   {
     id: '5',
@@ -52,7 +57,8 @@ const projects: IProject[] = [
     title: "Уютное шале",
     area: 90,
     floors: 1,
-    rooms: 3
+    rooms: 3,
+    features:['']
   },
   {
     id: '6',
@@ -60,7 +66,8 @@ const projects: IProject[] = [
     title: "Дом-теплица",
     area: 156,
     floors: 2,
-    rooms: 11
+    rooms: 11,
+    features:['гараж','кладовая', 'гардеробная']
   },
   {
     id: '7',
@@ -68,7 +75,8 @@ const projects: IProject[] = [
     title: "Скандинавский уют",
     area: 120,
     floors: 1,
-    rooms: 4
+    rooms: 4,
+    features:['гараж', 'сауна']
   },
   {
     id: '8',
@@ -76,7 +84,8 @@ const projects: IProject[] = [
     title: "Современный хай-тек",
     area: 250,
     floors: 2,
-    rooms: 6
+    rooms: 6,
+    features:['гараж', 'бассейн']
   },
   {
     id: '9',
@@ -84,7 +93,8 @@ const projects: IProject[] = [
     title: "Уютное шале",
     area: 90,
     floors: 1,
-    rooms: 3
+    rooms: 3,
+    features:['']
   },
   {
     id: '10',
@@ -92,7 +102,8 @@ const projects: IProject[] = [
     title: "Дом-теплица",
     area: 156,
     floors: 2,
-    rooms: 11
+    rooms: 11,
+    features:['гараж','кладовая', 'гардеробная']
   },
   {
     id: '11',
@@ -100,7 +111,8 @@ const projects: IProject[] = [
     title: "Уютное шале",
     area: 90,
     floors: 1,
-    rooms: 3
+    rooms: 3,
+    features:['']
   },
   {
     id: '12',
@@ -108,7 +120,8 @@ const projects: IProject[] = [
     title: "Дом-теплица",
     area: 156,
     floors: 2,
-    rooms: 11
+    rooms: 11,
+    features:['гараж','кладовая', 'гардеробная']
   },
 ];
 export default projects;

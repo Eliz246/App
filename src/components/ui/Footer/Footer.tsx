@@ -22,7 +22,7 @@ const Footer:React.FC = () =>{
                     <div className={s.left_wrap}>
                         <div className={s.menu_wrap}>
                             <ul className={s.menu}>
-                                <li className={s.menu_item}>Проекты</li>
+                                <li className={s.menu_item}><Link to="/catalog" className={s.link}>Проекты</Link></li>
                                 <li className={s.menu_item}>Блог</li>
                             </ul>
                             <ul className={s.menu}>

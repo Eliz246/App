@@ -11,7 +11,7 @@ const Header: React.FC =()=>{
                 <div className={s.wrapper}>
                     <Link to='/' className={cn(s.logo, 'logo',s.link)}>Interi</Link>
                     <ul className={s.menu}>
-                        <li className={s.item}>Проекты</li>
+                        <li className={s.item}><Link to="/catalog" className={s.link}>Проекты</Link></li>
                         <li className={s.item}>Блог</li>
                         <li className={s.item}>О нас</li>
                         <li className={s.item}>Контакты</li>

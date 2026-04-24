@@ -7,6 +7,8 @@ import { Favorites } from './components/ui/Favorites/Favorites';
 import Calculator from './components/ui/Calculator/Calculator';
 import Form from './components/ui/Form/Form';
 import Footer from './components/ui/Footer/Footer';
+import Catalog from './components/ui/Catalog/Catalog';
+
 function App() {
   const lastProjects = projects.slice(0,8);
   const MainPage = ()=>(
@@ -42,6 +44,7 @@ function App() {
           </div>
         </div>
       }/>
+      <Route path="/catalog" element={<Catalog />} />
     </Routes>
     <Footer/>
   </Router> 
