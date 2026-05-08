@@ -9,6 +9,7 @@ import Form from './components/ui/Form/Form';
 import Footer from './components/ui/Footer/Footer';
 import Catalog from './components/ui/Catalog/Catalog';
 import Contacts from './components/ui/Contacts/Contacts';
+import { ThemeProvider } from './components/ui/Theme/Theme';
 
 function App() {
   const lastProjects = projects.slice(0,8);
@@ -33,23 +34,25 @@ function App() {
   </>
   );
   return (
-  <Router>
-    <Header></Header>
-    <Routes>
-      <Route path='/' element={<MainPage/>}/>
-      <Route path='/favorites' element={
-        <div className="section">
-          <div className="container">
-            <h2 className='h2'>Избранное</h2>
-              <Favorites/>
-          </div>
-        </div>
-      }/>
-      <Route path="/catalog" element={<Catalog />} />
-      <Route path="/contacts" element={<><Contacts /><Form/></>} />
-    </Routes>
-    <Footer/>
-  </Router> 
+    <ThemeProvider>
+      <Router>
+        <Header></Header>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path='/favorites' element={
+            <div className="section">
+              <div className="container">
+                <h2 className='h2'>Избранное</h2>
+                  <Favorites/>
+              </div>
+            </div>
+          }/>
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/contacts" element={<><Contacts /><Form/></>} />
+        </Routes>
+        <Footer/>
+      </Router>
+   </ThemeProvider>
   );
 }
 

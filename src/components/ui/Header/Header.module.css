@@ -27,3 +27,7 @@
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+.btnicon{
+    background:none;
+    border: none;
+}
