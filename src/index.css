@@ -8,7 +8,7 @@
 [data-theme='dark'] {
   --bg-color: #121212;
   --text-color: #f5f5f5;
-  --accent-col: #93DBFF;
+  --accent-col: #6ea4c0;
   --fon-grey: #D9D9D9;
   --fon-accent: #172830;
 }
@@ -16,10 +16,12 @@ body {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased; 
   margin:0px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 .container{
   margin:0 auto;
-  max-width: 1516px;
+  max-width: 1516px;  
   padding: 0px 20px;
 }
 .logo{

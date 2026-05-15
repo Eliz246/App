@@ -1,7 +1,7 @@
 .section {
-  background-color: #E3F5FF; /* Тот же нежно-голубой фон */
+  background-color: var(--fon-accent);
   padding: 60px 20px;
-  border-radius: 60px; /* Большое скругление секции */
+  border-radius: 60px;
   display: flex;
   justify-content: center;
   margin: 40px auto;
