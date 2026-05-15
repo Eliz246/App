@@ -1,3 +1,7 @@
+import house1 from '../images/house-isolated-field.jpg';
+import house2 from '../images/house2.jpg';
+import house3 from '../images/house3.jpg';
+import house4 from '../images/house4.jpg';
 export interface ArticleProp {
   id: number;
   title: string;
@@ -11,97 +15,97 @@ export const Articles: ArticleProp[] = [
   {
     id: 1,
     title: "Название статьи 1",
-    topic: "Тема",
+    topic: "Проект",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на предоставлении качественных услуг.",
-    img: "https://picsum.photos", 
+    img: house1, 
     path: "/articles/1"
   },
   {
     id: 2,
     title: "Название статьи 2",
-    topic: "Тема",
+    topic: "Подготовка",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos", 
+    img: house2, 
     path: "/articles/2"
   },
   {
     id: 3,
     title: "Название статьи 3",
-    topic: "Тема",
+    topic: "Дача",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house3,
     path: "/articles/3"
   },
   {
     id: 4,
     title: "Название статьи 4",
-    topic: "Тема",
+    topic: "Проект",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house4,
     path: "/articles/4"
   },
   {
     id: 5,
     title: "Название статьи 5",
-    topic: "Тема",
+    topic: "Дача",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house1,
     path: "/articles/5"
   },
   {
     id: 6,
     title: "Название статьи 6",
-    topic: "Тема",
+    topic: "Проект",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house3,
     path: "/articles/6"
   },
   {
     id: 7,
     title: "Название статьи 7",
-    topic: "Тема",
+    topic: "Проект",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на предоставлении...",
-    img: "https://picsum.photos", 
+    img: house2, 
     path: "/articles/7"
   },
   {
     id: 8,
     title: "Название статьи 8",
-    topic: "Тема",
+    topic: "Подготовка",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house4,
     path: "/articles/8"
   },
   {
     id: 9,
     title: "Название статьи 9",
-    topic: "Тема",
+    topic: "Дача",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house2,
     path: "/articles/9"
   },
   {
     id: 10,
     title: "Название статьи 10",
-    topic: "Тема",
+    topic: "Узкий участок",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house3,
     path: "/articles/10"
   },
   {
     id: 11,
     title: "Название статьи 11 (Появилась после клика)",
-    topic: "Тема",
+    topic: "Узкий участок",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на предоставлении...",
-    img: "https://picsum.photos",
+    img: house1,
     path: "/articles/11"
   },
   {
     id: 12,
     title: "Название статьи 12 (Появилась после клика)",
-    topic: "Тема",
+    topic: "Проект",
     description: "Во что сегодня обходятся строительно-монтажные операции, хорошо осведомлен персонал фирм, специализирующихся на пр...",
-    img: "https://picsum.photos",
+    img: house4,
     path: "/articles/12"
   }
 ];

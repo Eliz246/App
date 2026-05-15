@@ -10,6 +10,8 @@ import Footer from './components/ui/Footer/Footer';
 import Catalog from './components/ui/Catalog/Catalog';
 import Contacts from './components/ui/Contacts/Contacts';
 import { ThemeProvider } from './components/ui/Theme/Theme';
+import { ArticleGrid } from './components/ui/Article/Article';
+import { ArticlePage } from './components/ui/ArticlePage/ArticlePage';
 
 function App() {
   const lastProjects = projects.slice(0,8);
@@ -49,6 +51,8 @@ function App() {
           }/>
           <Route path="/catalog" element={<Catalog />} />
           <Route path="/contacts" element={<><Contacts /><Form/></>} />
+          <Route path="/articles" element={<ArticleGrid/>}/>
+          <Route path="/articles/:id" element={<ArticlePage />} />
         </Routes>
         <Footer/>
       </Router>

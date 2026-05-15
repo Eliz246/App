@@ -14,7 +14,7 @@ const Header =()=>{
                     <Link to='/' className={cn(s.logo, 'logo',s.link)}>Interi</Link>
                     <ul className={s.menu}>
                         <li className={s.item}><Link to="/catalog" className={s.link}>Проекты</Link></li>
-                        <li className={s.item}>Блог</li>
+                        <li className={s.item}><Link to="/articles" className={s.link}>Блог</Link></li>
                         <li className={s.item}>О нас</li>
                         <li className={s.item}><Link to="/contacts" className={s.link}>Контакты</Link></li>
                     </ul>

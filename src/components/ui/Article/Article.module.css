@@ -1,0 +1,69 @@
+/* Главный контейнер блока, жестко зафиксированный на 1200px */
+.gridContainer {
+  width: 1516px;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+
+.articlesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Первая пара в цикле: 1 и 2 (далее 13 и 14, 25 и 26...) */
+.gridItem:nth-child(12n + 1),
+.gridItem:nth-child(12n + 2) {
+  grid-column: span 2;
+}
+
+/* Вторая пара в цикле: 7 и 8 (далее 19 и 20, 31 и 32...) */
+.gridItem:nth-child(12n + 7),
+.gridItem:nth-child(12n + 8) {
+  grid-column: span 2;
+}
+
+/* Анимация плавного появления новых карточек при клике на "Еще" */
+@keyframes gridCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: gridCardFadeIn 0.4s ease forwards;
+}
+
+/* Обертка для центрирования кнопки */
+.buttonWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+/* Стили кнопки "Еще" */
+.loadMoreBtn {
+  background-color: #9addff;
+  color: #222222;
+  border: none;
+  padding: 14px 80px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.loadMoreBtn:hover {
+  background-color: #79cfff;
+}
+
+.loadMoreBtn:active {
+  transform: scale(0.98);
+}

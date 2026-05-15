@@ -17,7 +17,7 @@
   transition: color 0.2s ease;
 }
 
-.art_card_link:hover .image-wrapper img {
+.art_card_link:hover .img_wrap img {
   transform: scale(1.03); 
 }
 
@@ -34,4 +34,17 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease; 
+}
+.topic {
+  position: absolute;   
+  top: 15px;            
+  left: 15px;           
+  background-color: #ffffff; 
+  padding: 6px 16px;    
+  border-radius: 20px;  
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+  z-index: 2;          
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
