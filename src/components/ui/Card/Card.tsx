@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from 'react-router-dom';
 import cn from 'classnames';
 import s from './Card.module.css';
 import heartS from '../../../images/heart_stroke_b.svg';
@@ -21,6 +22,7 @@ const Card =({id, onFavoriteChange, image, title, area, floors, rooms}:CardProps
         return favorites.includes(id);
     });
     const toggleFavorite = (e: React.MouseEvent) => {
+        e.preventDefault(); // Запрещаем переход по ссылке при клике на кнопку
         e.stopPropagation();
         // 2. Получаем текущий список из памяти
         const saved = localStorage.getItem('favorites');
@@ -51,22 +53,24 @@ const Card =({id, onFavoriteChange, image, title, area, floors, rooms}:CardProps
         return titles[number % 100 > 4 && number % 100 < 20 ? 2 : cases[Math.min(number % 10, 5)]];
     };
     return(
-        <div className={s.card}>
-            <div className={s.img_wrapper}>
-                <img className={s.img} src={image} alt={title}/>
-                <button className={s.favoriteBtn} onClick={toggleFavorite}>
-                    <img src={isFavorite ? heartF : heartS} alt="favorite" className={s.heartIcon}/>
-                </button>
-            </div>
-            <div className={s.content}>
-                <h4 className={cn(s.h4, 'h4')}>{title}</h4>
-                <div className={s.info}>
-                    <p className={s.item}>{area}m2</p>
-                    <p className={s.item}>{floors}{declOfNum(floors,[' этаж',' этажа',' этажей'])}</p>
-                    <p className={s.item}>{rooms}{declOfNum(rooms,[' комната',' комнаты',' комнат'])}</p>
+        <Link to={`/projects/${id}`} className={s.card_link}>
+            <div className={s.card}>
+                <div className={s.img_wrapper}>
+                    <img className={s.img} src={image} alt={title}/>
+                    <button className={s.favoriteBtn} onClick={toggleFavorite}>
+                        <img src={isFavorite ? heartF : heartS} alt="favorite" className={s.heartIcon}/>
+                    </button>
+                </div>
+                <div className={s.content}>
+                    <h4 className={cn(s.h4, 'h4')}>{title}</h4>
+                    <div className={s.info}>
+                        <p className={s.item}>{area}m2</p>
+                        <p className={s.item}>{floors}{declOfNum(floors,[' этаж',' этажа',' этажей'])}</p>
+                        <p className={s.item}>{rooms}{declOfNum(rooms,[' комната',' комнаты',' комнат'])}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </Link>
     );
 };
 

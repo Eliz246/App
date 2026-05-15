@@ -12,6 +12,8 @@ import Contacts from './components/ui/Contacts/Contacts';
 import { ThemeProvider } from './components/ui/Theme/Theme';
 import { ArticleGrid } from './components/ui/Article/Article';
 import { ArticlePage } from './components/ui/ArticlePage/ArticlePage';
+import { AboutCompany } from './components/ui/AboutCompany/AboutCompany';
+import { ProjectPage } from './components/ui/ProjectPage/ProjectPage';
 
 function App() {
   const lastProjects = projects.slice(0,8);
@@ -53,6 +55,8 @@ function App() {
           <Route path="/contacts" element={<><Contacts /><Form/></>} />
           <Route path="/articles" element={<ArticleGrid/>}/>
           <Route path="/articles/:id" element={<ArticlePage />} />
+          <Route path="/about" element={<AboutCompany/>}/>
+          <Route path="/projects/:id" element={<ProjectPage/>}/>
         </Routes>
         <Footer/>
       </Router>

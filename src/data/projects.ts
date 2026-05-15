@@ -2,6 +2,11 @@ import house1 from '../images/house-isolated-field.jpg';
 import house2 from '../images/house2.jpg';
 import house3 from '../images/house3.jpg';
 import house4 from '../images/house4.jpg';
+import arcIm from '../images/floor-plan-with-furniture-blueprint-illustration.jpg';
+export interface IRoom {
+  name: string;
+  area: number;
+}
 
 export interface IProject {
   id: string | number;
@@ -11,6 +16,8 @@ export interface IProject {
   floors: number;
   rooms: number;
   features: string[];
+  layoutImage: string;
+  roomsList: IRoom[];
 }
 
 const projects: IProject[] = [
@@ -21,7 +28,14 @@ const projects: IProject[] = [
     area: 120,
     floors: 1,
     rooms: 4,
-    features:['гараж', 'сауна']
+    features:['гараж', 'сауна'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная-кухня", area: 50 },
+      { name: "Мастер-спальня", area: 25 },
+      { name: "Детская комната", area: 25 },
+      { name: "Кабинет", area: 20 }
+    ]
   },
   {
     id: '2',
@@ -30,7 +44,16 @@ const projects: IProject[] = [
     area: 250,
     floors: 2,
     rooms: 6,
-    features:['гараж', 'бассейн']
+    features:['гараж', 'бассейн'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Просторная гостиная", area: 70 },
+      { name: "Кухня-столовая", area: 40 },
+      { name: "Главная спальня", area: 40 },
+      { name: "Детская комната", area: 35 },
+      { name: "Гостевая спальня", area: 35 },
+      { name: "Домашний офис", area: 30 }
+    ]
   },
   {
     id: '3',
@@ -39,7 +62,13 @@ const projects: IProject[] = [
     area: 90,
     floors: 1,
     rooms: 3,
-    features:['']
+    features:[''],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Кухня-гостиная", area: 45 },
+      { name: "Спальня", area: 25 },
+      { name: "Детская", area: 20 }
+    ]
   },
   {
     id: '4',
@@ -48,7 +77,21 @@ const projects: IProject[] = [
     area: 156,
     floors: 2,
     rooms: 11,
-    features:['гараж','кладовая', 'гардеробная']
+    features:['гараж','кладовая', 'гардеробная'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная", area: 30 },
+      { name: "Кухня", area: 15 },
+      { name: "Зимний сад", area: 20 },
+      { name: "Главная спальня", area: 15 },
+      { name: "Спальня 2", area: 12 },
+      { name: "Спальня 3", area: 12 },
+      { name: "Кабинет", area: 12 },
+      { name: "Игровая", area: 12 },
+      { name: "Творческая мастерская", area: 10 },
+      { name: "Гардеробная", area: 10 },
+      { name: "Кладовая", area: 8 }
+    ]
   },
   {
     id: '5',
@@ -57,7 +100,13 @@ const projects: IProject[] = [
     area: 90,
     floors: 1,
     rooms: 3,
-    features:['']
+    features:[''],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Кухня-гостиная", area: 45 },
+      { name: "Спальня", area: 25 },
+      { name: "Детская", area: 20 }
+    ]
   },
   {
     id: '6',
@@ -66,7 +115,21 @@ const projects: IProject[] = [
     area: 156,
     floors: 2,
     rooms: 11,
-    features:['гараж','кладовая', 'гардеробная']
+    features:['гараж','кладовая', 'гардеробная'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная", area: 30 },
+      { name: "Кухня", area: 15 },
+      { name: "Зимний сад", area: 20 },
+      { name: "Главная спальня", area: 15 },
+      { name: "Спальня 2", area: 12 },
+      { name: "Спальня 3", area: 12 },
+      { name: "Кабинет", area: 12 },
+      { name: "Игровая", area: 12 },
+      { name: "Творческая мастерская", area: 10 },
+      { name: "Гардеробная", area: 10 },
+      { name: "Кладовая", area: 8 }
+    ]
   },
   {
     id: '7',
@@ -75,7 +138,14 @@ const projects: IProject[] = [
     area: 120,
     floors: 1,
     rooms: 4,
-    features:['гараж', 'сауна']
+    features:['гараж', 'сауна'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная-кухня", area: 50 },
+      { name: "Мастер-спальня", area: 25 },
+      { name: "Детская комната", area: 25 },
+      { name: "Кабинет", area: 20 }
+    ]
   },
   {
     id: '8',
@@ -84,7 +154,16 @@ const projects: IProject[] = [
     area: 250,
     floors: 2,
     rooms: 6,
-    features:['гараж', 'бассейн']
+    features:['гараж', 'бассейн'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Просторная гостиная", area: 70 },
+      { name: "Кухня-столовая", area: 40 },
+      { name: "Главная спальня", area: 40 },
+      { name: "Детская комната", area: 35 },
+      { name: "Гостевая спальня", area: 35 },
+      { name: "Домашний офис", area: 30 }
+    ]
   },
   {
     id: '9',
@@ -93,7 +172,13 @@ const projects: IProject[] = [
     area: 90,
     floors: 1,
     rooms: 3,
-    features:['']
+    features:[''],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Кухня-гостиная", area: 45 },
+      { name: "Спальня", area: 25 },
+      { name: "Детская", area: 20 }
+    ]
   },
   {
     id: '10',
@@ -102,7 +187,21 @@ const projects: IProject[] = [
     area: 156,
     floors: 2,
     rooms: 11,
-    features:['гараж','кладовая', 'гардеробная']
+    features:['гараж','кладовая', 'гардеробная'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная", area: 30 },
+      { name: "Кухня", area: 15 },
+      { name: "Зимний сад", area: 20 },
+      { name: "Главная спальня", area: 15 },
+      { name: "Спальня 2", area: 12 },
+      { name: "Спальня 3", area: 12 },
+      { name: "Кабинет", area: 12 },
+      { name: "Игровая", area: 12 },
+      { name: "Творческая мастерская", area: 10 },
+      { name: "Гардеробная", area: 10 },
+      { name: "Кладовая", area: 8 }
+    ]
   },
   {
     id: '11',
@@ -111,7 +210,13 @@ const projects: IProject[] = [
     area: 90,
     floors: 1,
     rooms: 3,
-    features:['']
+    features:[''],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Кухня-гостиная", area: 45 },
+      { name: "Спальня", area: 25 },
+      { name: "Детская", area: 20 }
+    ]
   },
   {
     id: '12',
@@ -120,7 +225,21 @@ const projects: IProject[] = [
     area: 156,
     floors: 2,
     rooms: 11,
-    features:['гараж','кладовая', 'гардеробная']
+    features:['гараж','кладовая', 'гардеробная'],
+    layoutImage: arcIm,
+    roomsList: [
+      { name: "Гостиная", area: 30 },
+      { name: "Кухня", area: 15 },
+      { name: "Зимний сад", area: 20 },
+      { name: "Главная спальня", area: 15 },
+      { name: "Спальня 2", area: 12 },
+      { name: "Спальня 3", area: 12 },
+      { name: "Кабинет", area: 12 },
+      { name: "Игровая", area: 12 },
+      { name: "Творческая мастерская", area: 10 },
+      { name: "Гардеробная", area: 10 },
+      { name: "Кладовая", area: 8 }
+    ]
   },
 ];
 export default projects;
