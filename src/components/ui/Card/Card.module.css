@@ -36,12 +36,11 @@
     color:#858585;
 }
 .card_link {
-  text-decoration: none; /* Убирает подчеркивание ссылки */
-  color: inherit;        /* Сохраняет черный цвет текста заголовков */
+  text-decoration: none; 
+  color: inherit;  
   display: block;
 }
 
-/* При желании можно добавить легкий интерактивный эффект наведению */
 .card_link:hover h4 {
   color: #00a8f3; 
   transition: color 0.2s ease;

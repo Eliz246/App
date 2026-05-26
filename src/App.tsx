@@ -17,14 +17,11 @@ import { ArticlePage } from './components/ui/ArticlePage/ArticlePage';
 import { AboutCompany } from './components/ui/AboutCompany/AboutCompany';
 import { ProjectPage } from './components/ui/ProjectPage/ProjectPage';
 
-// 1. Выносим основное содержимое в отдельный компонент, чтобы работал хук useLocation
 function AppContent() {
   const location = useLocation();
   const path = location.pathname;
 
-  // Функция для динамического определения данных баннера
   const getBannerData = () => {
-    // Проверка на детальную страницу ПРОЕКТА (/projects/id)
     const projectMatch = path.match(/^\/projects\/([^/]+)/);
     if (projectMatch) {
       const projectId = projectMatch[1];
@@ -35,8 +32,6 @@ function AppContent() {
         showButton: false
       };
     }
-
-    // Проверка на детальную страницу СТАТЬИ (/articles/id)
     const articleMatch = path.match(/^\/articles\/([^/]+)/);
     if (articleMatch) {
       const articleId = articleMatch[1];
@@ -47,8 +42,6 @@ function AppContent() {
         showButton: false
       };
     }
-
-    // Настройки для обычных статичных страниц
     switch (path) {
       case '/':
         return { title: "Ваши идеи —<br />наши проекты", image: undefined, showButton: true };
@@ -63,14 +56,13 @@ function AppContent() {
       case '/contacts':
         return { title: "Контакты", image: undefined, showButton: false };
       default:
-        return null; // На несуществующих страницах баннер не отобразится
+        return null;
     }
   };
 
   const bannerData = getBannerData();
   const lastProjects = projects.slice(0, 8);
 
-  // Компонент главной страницы
   const MainPage = () => (
     <>
       <div className="section">
@@ -95,8 +87,6 @@ function AppContent() {
   return (
     <>
       <Header />
-      
-      {/* 2. Рендерим баннер автоматически на основе путей */}
       {bannerData && (
         <Baner 
           title={bannerData.title} 
@@ -104,7 +94,6 @@ function AppContent() {
           showButton={bannerData.showButton} 
         />
       )}
-
       <Routes>
         <Route path='/' element={<MainPage />} />
         <Route path='/favorites' element={
@@ -127,8 +116,6 @@ function AppContent() {
     </>
   );
 }
-
-// 3. Главный корневой компонент только оборачивает всё в провайдеры
 function App() {
   return (
     <ThemeProvider>

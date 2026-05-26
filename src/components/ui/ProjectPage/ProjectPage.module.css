@@ -7,12 +7,12 @@
   font-size: 32px;
   font-weight: 400;
   margin: 0 0 24px 0;
+  color:var(--text-color)
 }
 
-/* Верхняя сетка (Архитектура + О проекте) */
 .top_grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr; /* Левая колонка шире правой */
+  grid-template-columns: 1.5fr 1fr;
   gap: 80px;
   margin-bottom: 80px;
 }
@@ -20,7 +20,7 @@
 .descr_text {
   font-size: 17px;
   line-height: 1.6;
-  color: #333333;
+  color: var(--text-color);
   margin: 0;
 }
 
@@ -44,9 +44,9 @@
 
 .info_value {
   font-weight: 500;
+  color:var(--text-color)
 }
 
-/* Нижняя секция (Планировка) */
 .layout_section {
 
   padding-top: 60px;
@@ -54,7 +54,7 @@
 
 .layout_grid {
   display: grid;
-  grid-template-columns: 1fr 1.5fr; /* Таблица уже, чем изображение чертежа */
+  grid-template-columns: 1fr 1.5fr;
   gap: 80px;
   align-items: flex-start;
 }
@@ -78,11 +78,12 @@
 
 .room_area {
   font-weight: 500;
+  color:var(--text-color)
 }
 
 .blueprint_wrapper {
   width: 100%;
-  background-color: #f5f5f5; /* Цвет подложки чертежа */
+  background-color: #f5f5f5; 
   border-radius: 8px;
   overflow: hidden;
 }
@@ -94,7 +95,6 @@
   object-fit: contain;
 }
 
-/* Адаптивность для планшетов и мобильных устройств */
 @media (max-width: 900px) {
   .top_grid, .layout_grid {
     grid-template-columns: 1fr;

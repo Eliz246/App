@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import s from "./Baner.module.css";
 
 interface BannerProps {
@@ -7,7 +7,7 @@ interface BannerProps {
   showButton?: boolean;
 }
 
-export const Baner: React.FC<BannerProps> = ({ title, backgroundImage, showButton = false }) => {
+export const Baner = ({ title, backgroundImage, showButton = false }:BannerProps) => {
   const bannerStyle = backgroundImage 
     ? { backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${backgroundImage})` }
     : undefined;
@@ -17,7 +17,7 @@ export const Baner: React.FC<BannerProps> = ({ title, backgroundImage, showButto
       <div className="container">
         <div className={s.content}>
           <h1 className={s.title} dangerouslySetInnerHTML={{ __html: title }} />
-          {showButton && <button className={s.btn}>Консультация</button>}
+          <Link to={`/contacts`} className={s.card_link}>{showButton && <button className={s.btn}>Консультация</button>}</Link>
         </div>
       </div>
     </div>
