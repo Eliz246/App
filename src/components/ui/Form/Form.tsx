@@ -9,13 +9,11 @@ interface FormData {
 }
 
 const Form: React.FC = () => {
-  // Инициализируем стейт данными из localStorage (если они там есть)
   const [formData, setFormData] = useState<FormData>(() => {
     const saved = localStorage.getItem('draft_form_data');
     return saved ? JSON.parse(saved) : { name: '', email: '', phone: '', message: '' };
   });
 
-  // useEffect сохраняет каждое изменение инпутов как "черновик"
   useEffect(() => {
     localStorage.setItem('draft_form_data', JSON.stringify(formData));
   }, [formData]);
@@ -29,7 +27,6 @@ const Form: React.FC = () => {
     e.preventDefault();
     console.log('Данные успешно отправлены:', formData);
     
-    // Очищаем форму и удаляем черновик из localStorage после отправки
     setFormData({ name: '', email: '', phone: '', message: '' });
     localStorage.removeItem('draft_form_data');
     alert('Форма отправлена!');

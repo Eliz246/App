@@ -14,7 +14,6 @@ export const Favorites: React.FC = () => {
 
     useEffect(() => {
       const saved = localStorage.getItem('favorites');
-      // Явно типизируем массив ID как (string | number)[]
       const savedIds: (string | number)[] = saved ? JSON.parse(saved) : [];
 
       const filtered = projects.filter((project: IProject) => 
