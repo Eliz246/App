@@ -116,7 +116,6 @@ const Catalog = () => {
         </div>
       </aside>
 
-      {/* Основная часть */}
       <main className={s.content}>
         <div className={s.sort_bar}>
           {(['area', 'floors', 'rooms'] as SortField[]).map(field => (
