@@ -22,27 +22,22 @@ const Card =({id, onFavoriteChange, image, title, area, floors, rooms}:CardProps
         return favorites.includes(id);
     });
     const toggleFavorite = (e: React.MouseEvent) => {
-        e.preventDefault(); // Запрещаем переход по ссылке при клике на кнопку
+        e.preventDefault();
         e.stopPropagation();
-        // 2. Получаем текущий список из памяти
         const saved = localStorage.getItem('favorites');
         let favorites = saved ? JSON.parse(saved) : [];
 
         if (!isFavorite) {
-        // Добавляем ID, если его там нет
         favorites.push(id);
         } else {
-        // Удаляем ID, если он там был
         favorites = favorites.filter((favId: string | number) => favId !== id);
         }
-        // 3. Сохраняем обновленный список обратно
         localStorage.setItem('favorites', JSON.stringify(favorites));
         setIsFavorite(!isFavorite);
 
         const newFavoriteStatus = !isFavorite;
         setIsFavorite(newFavoriteStatus);
 
-        // ВЫЗЫВАЕМ ФУНКЦИЮ ОБРАТНОЙ СВЯЗИ
         if (onFavoriteChange) {
             onFavoriteChange(id, newFavoriteStatus);
         }

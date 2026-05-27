@@ -8,20 +8,18 @@ type SortField = 'area' | 'floors' | 'rooms';
 type SortDir = 'asc' | 'desc';
 
 const Catalog = () => {
-  // --- Состояния ---
+
   const [visibleCount, setVisibleCount] = useState(9);
   const [sortField, setSortField] = useState<SortField | null>(null);
   const [sortDir, setSortDir] = useState<SortDir>('desc');
 
-  // Состояния фильтров
   const [selectedFloors, setSelectedFloors] = useState<number[]>([]);
   const [areaRange, setAreaRange] = useState({ from: '', to: '' });
   const [roomsRange, setRoomsRange] = useState({ from: '', to: '' });
   const [selectedFeatures, setSelectedFeatures] = useState<string[]>([]);
 
-  // --- Логика фильтрации и сортировки ---
   const filteredAndSorted = useMemo(() => {
-    // 1. Фильтруем
+
     let result = projects.filter(p => {
       const matchFloors = selectedFloors.length === 0 || selectedFloors.includes(p.floors);
       
@@ -33,13 +31,11 @@ const Catalog = () => {
       const to = Number(areaRange.to) || Infinity;
       const matchArea = p.area >= from && p.area <= to;
 
-      // Фильтр по доп. помещениям (должны быть ВСЕ выбранные)
       const matchFeatures = selectedFeatures.every(f => p.features.includes(f));
 
       return matchFloors && matchArea && matchRooms && matchFeatures;
     });
 
-    // 2. Сортируем
     if (sortField) {
       result.sort((a, b) => {
         const valA = a[sortField];
@@ -51,7 +47,6 @@ const Catalog = () => {
     return result;
   }, [selectedFloors, areaRange, roomsRange, selectedFeatures, sortField, sortDir]);
 
-  // --- Обработчики ---
   const handleSort = (field: SortField) => {
     if (sortField === field) {
       setSortDir(prev => prev === 'desc' ? 'asc' : 'desc');
@@ -69,7 +64,6 @@ const Catalog = () => {
 
   return (
     <div className={s.catalog_layout}>
-      {/* Боковая панель (Sticky) */}
       <aside className={s.sidebar}>
         <div className={s.filter_block}>
           <h3>Этажность</h3>

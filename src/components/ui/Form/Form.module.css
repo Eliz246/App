@@ -4,7 +4,9 @@
   border-radius: 60px;
   display: flex;
   justify-content: center;
-  margin: 40px auto;
+  margin: 100px auto;
+  max-width: 1516px;  
+  
 }
 
 .form {
@@ -50,4 +52,15 @@
 
 .submitBtn:hover {
   background-color: #76C9F5;
+}
+.input_row, .inputs {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+@media (max-width: 500px) {
+  .input_row, .inputs {
+    flex-direction: column; 
+  }
 }

@@ -4,7 +4,7 @@ import Header from './components/ui/Header/Header';
 import { Baner } from './components/ui/Baner/Baner';
 import Card from './components/ui/Card/Card';
 import projects from './data/projects';
-import { Articles } from './data/articles'; // Убедитесь, что массив статей экспортирован из этого файла
+import { Articles } from './data/articles';
 import { Favorites } from './components/ui/Favorites/Favorites';
 import Calculator from './components/ui/Calculator/Calculator';
 import Form from './components/ui/Form/Form';
@@ -79,7 +79,10 @@ function AppContent() {
         <Calculator />
       </div>
       <div className="section">
-        <Form />
+        <div className="container">
+          <Form />
+        </div>
+        
       </div>
     </>
   );

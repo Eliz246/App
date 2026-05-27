@@ -9,7 +9,7 @@
   width: 280px;
   flex-shrink: 0;
   position: sticky;
-  top: 20px; /* Фиксация при скролле */
+  top: 20px; 
 }
 
 .filter_block {
@@ -67,6 +67,50 @@
   width: 100%;
   padding: 8px 12px;
   border: 1px solid #333;
-  border-radius: 4px; /* Если хочешь как на фото, или 40px для стиля проекта */
+  border-radius: 4px; 
   outline: none;
+}
+.catalog_layout {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .catalog_layout {
+    flex-direction: column; 
+  }
+  
+  .sidebar {
+    width: 100%; 
+    position: relative; 
+    top: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; 
+  }
+  
+  :global(.gridItem) {
+    grid-column: span 1 !important;
+  }
 }
